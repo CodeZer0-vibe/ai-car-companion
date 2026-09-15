@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "Dashboard Pet",
+    "slug": "dashboard-pet",
+    "version": "1.0.1",
+    "newArchEnabled": true,
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Dashboard Pet uses your location while the app is open to estimate driving context like speed and city.",
+        "NSMicrophoneUsageDescription": "Dashboard Pet needs microphone access so the AI can hear and talk to you in real-time.",
+        "NSCameraUsageDescription": "Dashboard Pet uses the rear camera while the app is open to summarize the road and nearby scene for live reactions.",
+        "NSMotionUsageDescription": "Dashboard Pet wants to know if you are walking or driving to judge you appropriately.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.coderezero.dashboardpet"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "WAKE_LOCK",
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Dashboard Pet uses your location while the app is open to track driving speed and know your city."
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "LANDSCAPE"
+        }
+      ],
+      "./plugins/withIOSAudioSessionLock",
+      "./plugins/withLiveAudioStreamPatch",
+      "expo-camera",
+      [
+        "expo-updates",
+        {
+          "username": "coderezero"
+        }
+      ],
+      "@sentry/react-native",
+      "react-native-audio-api",
+      "expo-audio",
+      "expo-asset"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a9a1c210-3b28-463c-9e34-76c14bfc0e2b"
+      }
+    }
+  }
+}
