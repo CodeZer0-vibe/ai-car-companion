@@ -2,6 +2,12 @@
 
 A hands-free driving companion for the car dashboard, powered by Gemini Live. You talk to it and it talks back in real time, and it can glance at the road through the camera when you ask, so it works the way a co-pilot would rather than something you tap at while driving.
 
+![AI Car Companion — live voice and on-demand rear-camera vision on device](docs/demo.gif)
+
+*Recorded on device: the live voice loop, the rear camera going live when asked, and the co-pilot's replies.*
+
+**Watch the full demo:** [full clip](https://github.com/CodeZer0-vibe/ai-car-companion/releases/download/v0.1.0-preview/AI-Car-Companion-demo.mp4)
+
 **Stack:** Expo (SDK 54) · React Native · `@google/genai` (Gemini Live) · streaming audio · on-demand camera vision · built and installed on iOS from a Windows machine
 
 > Work in progress. The real-time voice loop and on-demand vision work end to end on device.
